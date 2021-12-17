@@ -39,18 +39,14 @@
                     }
                 },
                 {
-                    "type": "dotnet",
-                    "style": "powerline",
-                    "powerline_symbol": "",
-                    "invert_powerline": false,
-                    "foreground": "#ffffff",
-                    "background": "#6CA35E",
-                    "leading_diamond": "",
-                    "trailing_diamond": "",
-                    "properties": {
-                        "display_version": true,
-                        "prefix": "  "
-                    }
+                  "type": "python",
+                  "style": "powerline",
+                  "powerline_symbol": "\uE0B0",
+                  "foreground": "#100e23",
+                  "background": "#906cff",
+                  "properties": {
+                    "prefix": " \uE235 "
+                  }
                 },
                 {
                     "type": "root",
