@@ -1,12 +1,19 @@
 #!/bin/bash
 
 # TODO: make interactive (ask whether to delete and reinstall)
+# TODO: add descriptive comments
 
 # Hardlinking .gitconfig file
 if [ ! -f "$HOME/.gitconfig" ]
 then
-  echo "Hardlinking .gitconfig"
-  ln .gitconfig ~/.gitconfig
+  if [ grep -i wsl /proc/version ]
+  then
+    echo "Hardlinking .gitconfig.wsl"
+    ln .gitconfig.wsl ~/.gitconfig
+  else
+    echo "Hardlinking .gitconfig"
+    ln .gitconfig ~/.gitconfig
+  fi
 else
   echo "~/.gitconfig already exists, delete to reset"
 fi
@@ -42,7 +49,7 @@ fi
 echo ""
 
 # Install fzf - https://github.com/junegunn/fzf
-echo "Installing fzf: choose y y n"
+echo "Installing fzf: **CHOOSE Y Y N**"
 ./fzf/install
 echo ""
 
@@ -84,4 +91,9 @@ else
   echo "Oh My Zsh already installed, delete ~/.oh-my-zsh to reinstall"
   echo ""
 fi
+
+# Install ripgrep - https://github.com/BurntSushi/ripgrep
+echo "Installing ripgrep"
+sudo apt-get install ripgrep
+echo ""
 
