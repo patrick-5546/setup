@@ -6,7 +6,7 @@
 # Hardlinking .gitconfig file
 if [ ! -f "$HOME/.gitconfig" ]
 then
-  if [ grep -i wsl /proc/version ]
+  if grep -iq wsl /proc/version
   then
     echo "Hardlinking .gitconfig.wsl"
     ln .gitconfig.wsl ~/.gitconfig
