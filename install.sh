@@ -3,41 +3,6 @@
 # TODO: make interactive (ask whether to delete and reinstall)
 # TODO: add descriptive comments
 
-# Hardlinking .gitconfig file
-if [ ! -f "$HOME/.gitconfig" ]
-then
-  if grep -iq wsl /proc/version
-  then
-    echo "Hardlinking .gitconfig.wsl"
-    cp -u $HOME/.setup/.gitconfig.wsl ~/.gitconfig
-  else
-    echo "Hardlinking .gitconfig"
-    cp -u $HOME/.setup/.gitconfig ~/.gitconfig
-  fi
-else
-  echo "~/.gitconfig already exists, delete to reset"
-fi
-
-# Hardlinking .vimrc file
-if [ ! -f "$HOME/.vimrc" ]
-then
-  echo "Hardlinking .vimrc"
-  ln $HOME/.setup/.vimrc ~/.vimrc
-else
-  echo "~/.vimrc already exists, delete to reset"
-fi
-
-# Hardlinking .zshrc file
-if [ ! -f "$HOME/.zshrc" ]
-then
-  echo "Hardlinking .zshrc"
-  ln $HOME/.setup/.zshrc ~/.zshrc
-else
-  echo "~/.zshrc already exists, delete to reset"
-fi
-
-echo ""
-
 # Clone plugins
 if [ -z "$(ls -A "$HOME/.setup/fzf")" ]
 then
@@ -84,10 +49,10 @@ pip3 install thefuck --user
 echo ""
 
 # Install Oh My Zsh - https://github.com/ohmyzsh/ohmyzsh
-if [ ! "/home/patrick/.oh-my-zsh" ]
+if [ ! -d "$HOME/.oh-my-zsh" ]
 then
   echo "Installing Oh My Zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   ln $HOME/.setup/.zshrc ~/.zshrc -f
 else
   echo "Oh My Zsh already installed, delete ~/.oh-my-zsh to reinstall"
@@ -98,4 +63,42 @@ fi
 echo "Installing ripgrep"
 sudo apt-get install ripgrep
 echo ""
+
+# Hardlinking .gitconfig file
+if [ ! -f "$HOME/.gitconfig" ]
+then
+  if grep -iq wsl /proc/version
+  then
+    echo "Hardlinking .gitconfig.wsl"
+    cp -u $HOME/.setup/.gitconfig.wsl ~/.gitconfig
+  else
+    echo "Hardlinking .gitconfig"
+    cp -u $HOME/.setup/.gitconfig ~/.gitconfig
+  fi
+else
+  echo "~/.gitconfig already exists, delete to reset"
+fi
+
+# Hardlinking .vimrc file
+if [ ! -f "$HOME/.vimrc" ]
+then
+  echo "Hardlinking .vimrc"
+  ln $HOME/.setup/.vimrc ~/.vimrc
+else
+  echo "~/.vimrc already exists, delete to reset"
+fi
+
+# Hardlinking .zshrc file
+if [ ! -f "$HOME/.zshrc" ]
+then
+  echo "Hardlinking .zshrc"
+  ln $HOME/.setup/.zshrc ~/.zshrc
+else
+  echo "~/.zshrc already exists, delete to reset"
+fi
+
+echo ""
+
+# Restart into zsh
+exec /bin/zsh
 
