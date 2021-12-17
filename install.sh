@@ -42,7 +42,9 @@ echo ""
 if [ -z "$(ls -A "$HOME/.setup/fzf")" ]
 then
   echo "Cloning plugins"
+  cd .setup
   git submodule update --init --depth=1
+  cd ..
 else
   echo "Plugins are already cloned"
 fi
