@@ -56,23 +56,24 @@ then
   ln $HOME/.setup/.zshrc ~/.zshrc -f
 else
   echo "Oh My Zsh already installed, delete ~/.oh-my-zsh to reinstall"
-  echo ""
 fi
+
+echo ""
 
 # Install ripgrep - https://github.com/BurntSushi/ripgrep
 echo "Installing ripgrep"
 sudo apt-get install ripgrep
 echo ""
 
-# Hardlinking .gitconfig file
+# Copying .gitconfig file
 if [ ! -f "$HOME/.gitconfig" ]
 then
   if grep -iq wsl /proc/version
   then
-    echo "Hardlinking .gitconfig.wsl"
+    echo "Copying .gitconfig.wsl"
     cp -u $HOME/.setup/.gitconfig.wsl ~/.gitconfig
   else
-    echo "Hardlinking .gitconfig"
+    echo "Copying .gitconfig"
     cp -u $HOME/.setup/.gitconfig ~/.gitconfig
   fi
 else
