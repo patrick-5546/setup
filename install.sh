@@ -9,10 +9,10 @@ then
   if grep -iq wsl /proc/version
   then
     echo "Hardlinking .gitconfig.wsl"
-    ln .gitconfig.wsl ~/.gitconfig
+    cp -u $HOME/.setup/.gitconfig.wsl ~/.gitconfig
   else
     echo "Hardlinking .gitconfig"
-    ln .gitconfig ~/.gitconfig
+    cp -u $HOME/.setup/.gitconfig ~/.gitconfig
   fi
 else
   echo "~/.gitconfig already exists, delete to reset"
@@ -22,7 +22,7 @@ fi
 if [ ! -f "$HOME/.vimrc" ]
 then
   echo "Hardlinking .vimrc"
-  ln .vimrc ~/.vimrc
+  ln $HOME/.setup/.vimrc ~/.vimrc
 else
   echo "~/.vimrc already exists, delete to reset"
 fi
@@ -31,7 +31,7 @@ fi
 if [ ! -f "$HOME/.zshrc" ]
 then
   echo "Hardlinking .zshrc"
-  ln .zshrc ~/.zshrc
+  ln $HOME/.setup/.zshrc ~/.zshrc
 else
   echo "~/.zshrc already exists, delete to reset"
 fi
@@ -39,7 +39,7 @@ fi
 echo ""
 
 # Clone plugins
-if [ -z "$(ls -A "fzf")" ]
+if [ -z "$(ls -A "$HOME/.setup/fzf")" ]
 then
   echo "Cloning plugins"
   git submodule update --init --depth=1
@@ -50,7 +50,7 @@ echo ""
 
 # Install fzf - https://github.com/junegunn/fzf
 echo "Installing fzf: **CHOOSE Y Y N**"
-./fzf/install
+$HOME/.setup/fzf/install
 echo ""
 
 # Install Oh My Posh (zsh theme) - https://ohmyposh.dev/docs/linux
@@ -67,7 +67,7 @@ if [ ! -d "$HOME/.poshthemes" ]
 then
   echo "Installing custom theme"
   mkdir ~/.poshthemes
-  ln .poshthemes/* ~/.poshthemes
+  ln $HOME/.setup/.poshthemes/* ~/.poshthemes
 else
   echo "Custom theme already installed, delete ~/.poshthemes to reinstall"
 fi
@@ -86,7 +86,7 @@ if [ ! "/home/patrick/.oh-my-zsh" ]
 then
   echo "Installing Oh My Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ln .zshrc ~/.zshrc -f
+  ln $HOME/.setup/.zshrc ~/.zshrc -f
 else
   echo "Oh My Zsh already installed, delete ~/.oh-my-zsh to reinstall"
   echo ""
