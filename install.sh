@@ -1,15 +1,27 @@
 #!/bin/bash
 
-# Make zsh the default shell
-if [ $SHELL != "/usr/bin/zsh" ]
+# TODO: make interactive (ask whether to delete and reinstall)
+
+# Hardlinking .gitconfig file
+if [ ! -f "$HOME/.gitconfig" ]
 then
-  echo "Changing default shell to zsh"
-  chsh -s $(which zsh)
-  echo ""
+  echo "Hardlinking .gitconfig"
+  ln .gitconfig ~/.gitconfig
+else
+  echo "~/.gitconfig already exists, delete to reset"
+fi
+
+# Hardlinking .vimrc file
+if [ ! -f "$HOME/.vimrc" ]
+then
+  echo "Hardlinking .vimrc"
+  ln .vimrc ~/.vimrc
+else
+  echo "~/.vimrc already exists, delete to reset"
 fi
 
 # Hardlinking .zshrc file
-if [ ! "$HOME/.zshrc" ]
+if [ ! -f "$HOME/.zshrc" ]
 then
   echo "Hardlinking .zshrc"
   ln .zshrc ~/.zshrc
@@ -17,8 +29,25 @@ else
   echo "~/.zshrc already exists, delete to reset"
 fi
 
+echo ""
+
+# Clone plugins
+if [ -z "$(ls -A "fzf")" ]
+then
+  echo "Cloning plugins"
+  git submodule update --init --depth=1
+else
+  echo "Plugins are already cloned"
+fi
+echo ""
+
+# Install fzf - https://github.com/junegunn/fzf
+echo "Installing fzf: choose y y n"
+./fzf/install
+echo ""
+
 # Install Oh My Posh (zsh theme) - https://ohmyposh.dev/docs/linux
-if [ ! "/usr/local/bin/oh-my-posh" ]
+if [ ! -f "/usr/local/bin/oh-my-posh" ]
 then
   echo "Installing Oh My Posh"
   sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -38,16 +67,21 @@ fi
 
 echo ""
 
+# Install thefuck - https://github.com/nvbn/thefuck
+echo "Installing thefuck"
+sudo apt update
+sudo apt install python3-dev python3-pip python3-setuptools
+pip3 install thefuck --user
+echo ""
+
 # Install Oh My Zsh - https://github.com/ohmyzsh/ohmyzsh
 if [ ! "/home/patrick/.oh-my-zsh" ]
 then
   echo "Installing Oh My Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ln .zshrc ~/.zshrc -f
 else
   echo "Oh My Zsh already installed, delete ~/.oh-my-zsh to reinstall"
   echo ""
 fi
-
-# Run zsh
-exec /bin/zsh
 
