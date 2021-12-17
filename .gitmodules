@@ -1,0 +1,9 @@
+[submodule "enhancd"]
+	path = enhancd
+	url = https://github.com/b4b4r07/enhancd
+[submodule "thefuck"]
+	path = thefuck
+	url = https://github.com/nvbn/thefuck
+[submodule "diff-so-fancy"]
+	path = diff-so-fancy
+	url = https://github.com/so-fancy/diff-so-fancy
