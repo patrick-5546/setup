@@ -29,7 +29,7 @@
                     "powerline_symbol": "",
                     "invert_powerline": false,
                     "foreground": "#100e23",
-                    "background": "#fffb38",
+                    "background": "#c386f1",
                     "leading_diamond": "",
                     "trailing_diamond": "",
                     "properties": {
@@ -46,7 +46,7 @@
                   "leading_diamond": "",
                   "trailing_diamond": "",
                   "foreground": "#100e23",
-                  "background": "#906cff",
+                  "background": "#a2c4e0",
                   "properties": {
                     "display_version": true,
                     "prefix": " \uE235 "
@@ -57,7 +57,7 @@
                     "style": "powerline",
                     "powerline_symbol": "",
                     "invert_powerline": false,
-                    "foreground": "#ffffff",
+                    "foreground": "#100e23",
                     "background": "#ffff66",
                     "leading_diamond": "",
                     "trailing_diamond": "",
