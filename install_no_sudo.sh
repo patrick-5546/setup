@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO: make interactive (ask whether to delete and reinstall)
+# TODO: make interactive (ask whether to delete, rename, or skip)
 # TODO: add descriptive comments
 # NOTE: does not refresh shell (do so manually with `zsh`)
 

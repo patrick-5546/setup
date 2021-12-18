@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# TODO: make interactive (ask whether to delete and reinstall)
+# TODO: make interactive (ask whether to delete, rename, or skip)
 # TODO: add descriptive comments
 
 # Install Oh My Posh (zsh theme) - https://ohmyposh.dev/docs/linux
@@ -11,15 +11,6 @@ then
   sudo chmod +x /usr/local/bin/oh-my-posh
 else
   echo "Oh My Posh already installed, delete /usr/local/bin/oh-my-posh to reinstall"
-fi
-
-if [ ! -d "$HOME/.poshthemes" ]
-then
-  echo "Installing custom theme"
-  mkdir ~/.poshthemes
-  ln $HOME/.setup/.poshthemes/* ~/.poshthemes
-else
-  echo "Custom theme already installed, delete ~/.poshthemes to reinstall"
 fi
 
 echo ""

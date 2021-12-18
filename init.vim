@@ -1,15 +1,28 @@
 source ~/.vimrc
 
-" packadd quickscope
-
-" execute 'luafile ' . stdpath('config') . '/lua/settings.lua'
-
-" hop plugin
-" Plug 'https://github.com/phaazon/hop.nvim'
-" lua require'hop'.setup()
-" nnoremap <silent> f :lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>
+" plugins
+" call plug#begin('C:\Users\pcrei\AppData\Local\nvim\autoload\plugged')
+" Plug 'asvetliakov/vim-easymotion'
+" call plug#end()
+" 
+" " vim-easymotion configuration
+" let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" " Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" " `s{char}{label}`
+" " nmap s <Plug>(easymotion-overwin-f)
+" " or
+" " `s{char}{char}{label}`
+" " Need one more keystroke, but on average, it may be more comfortable.
+" nmap s <Plug>(easymotion-overwin-f2)
+" 
+" " Turn on case-insensitive feature
+" let g:EasyMotion_smartcase = 1
 
 if exists("g:vscode")
+    " " More vim-easymotion confiuration: JK motions: Line motions
+    " map <Leader>j <Plug>(easymotion-j)
+    " map <Leader>k <Plug>(easymotion-k)
+
     " Toggle line numbering betweeb relative and absolute with :Nu
     command! Nu call VSCodeCall('settings.cycle.relativeLineNumbers')
     autocmd InsertEnter * :Nu

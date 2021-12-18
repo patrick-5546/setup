@@ -128,7 +128,7 @@ alias lt='ls -lahrt'
 alias llt='ls -lhrt'
 
 # Oh My Posh Theme configuration
-eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/ohmyposhv3-v2.json)"
+eval "$(oh-my-posh --init --shell zsh --config ~/.setup/poshthemes/ohmyposhv3-v2.json)"
 
 # enhancd configuration
 source $HOME/.setup/enhancd/init.sh
