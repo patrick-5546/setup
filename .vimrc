@@ -203,6 +203,9 @@ set history=500
 set autoread
 au FocusGained,BufEnter * checktime
 
+" Fast quiting
+nmap <leader>q :q<cr>
+
 " Fast saving
 nmap <leader>w :w<cr>
 
@@ -230,9 +233,6 @@ set hlsearch
 " Makes search act like search in modern browsers
 set incsearch
 
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
 " For regular expressions turn magic on
 set magic
 
@@ -241,9 +241,6 @@ set showmatch
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
-
-" Add a bit extra margin to the left
-set foldcolumn=1
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -305,19 +302,6 @@ nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-" Delete trailing white space on save, useful for some filetypes ;)
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
-
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
 
 " Helper functions
 

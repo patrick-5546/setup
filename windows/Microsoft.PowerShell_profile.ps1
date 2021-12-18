@@ -13,7 +13,7 @@ set-alias desktop "Desktop.ps1"
 #Set-PoshPrompt -theme "D:\Dropbox\poshv3.json"
 
 # Path to the Oh My Posh theme
-oh-my-posh --init --shell pwsh --config C:\Users\pcrei\AppData\Local\Programs\oh-my-posh\themes\ohmyposhv3-v2.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config $env:LOCALAPPDATA\Programs\oh-my-posh\themes\ohmyposhv3-v2.json | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
