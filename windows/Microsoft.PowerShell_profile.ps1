@@ -13,7 +13,7 @@ set-alias desktop "Desktop.ps1"
 #Set-PoshPrompt -theme "D:\Dropbox\poshv3.json"
 
 # Path to the Oh My Posh theme
-oh-my-posh --init --shell pwsh --config $env:LOCALAPPDATA\Programs\oh-my-posh\themes\ohmyposhv3-v2.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config $env:LOCALAPPDATA\Programs\oh-my-posh\themes\atomic.omp.json | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
@@ -694,3 +694,5 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet test")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
+cls  # So that Windows Terminal will render Oh My Posh themes with -nologo properly
