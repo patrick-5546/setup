@@ -12,14 +12,6 @@ then
 else
   echo "Oh My Posh already installed, delete /usr/local/bin/oh-my-posh to reinstall"
 fi
-
-echo ""
-
-# Install thefuck - https://github.com/nvbn/thefuck
-echo "Installing thefuck"
-sudo apt update
-sudo apt install python3-dev python3-pip python3-setuptools
-pip3 install thefuck --user
 echo ""
 
 # Install ripgrep - https://github.com/BurntSushi/ripgrep
