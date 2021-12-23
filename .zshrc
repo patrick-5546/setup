@@ -75,7 +75,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  thefuck
   fzf
 )
 
@@ -83,17 +82,6 @@ plugins=(
 export FZF_BASE=$HOME/.setup/fzf
 # DISABLE_FZF_AUTO_COMPLETION="true"
 # DISABLE_FZF_KEY_BINDINGS="true"
-
-# thefuck configuration
-export THEFUCK_RULES='sudo:no_command'
-export THEFUCK_EXCLUDE_RULES='git_pull:git_push'
-export THEFUCK_REQUIRE_CONFIRMATION='true'
-export THEFUCK_WAIT_COMMAND=10
-export THEFUCK_NO_COLORS='false'
-export THEFUCK_PRIORITY='no_command=9999:apt_get=100'
-export THEFUCK_HISTORY_LIMIT='2000'
-export THEFUCK_NUM_CLOSE_MATCHES='5'
-export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
 
 source $ZSH/oh-my-zsh.sh
 
