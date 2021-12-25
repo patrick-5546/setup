@@ -3,6 +3,11 @@
 # TODO: make interactive (ask whether to delete, rename, or skip)
 # TODO: add descriptive comments
 
+# Install zsh
+echo "Installing zsh"
+sudo apt-get install zsh
+echo ""
+
 # Install Oh My Posh (zsh theme) - https://ohmyposh.dev/docs/linux
 if [ ! -f "/usr/local/bin/oh-my-posh" ]
 then
@@ -19,7 +24,5 @@ echo "Installing ripgrep"
 sudo apt-get install ripgrep
 echo ""
 
-source ./install_no_sudo.sh
+source $HOME/.setup/install_no_sudo.sh
 
-# Restart into zsh
-exec /bin/zsh
