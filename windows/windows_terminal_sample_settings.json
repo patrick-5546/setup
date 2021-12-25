@@ -5,86 +5,21 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "ctrl+l"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "ctrl+h"
-        },
-        {
-            "command": "closeWindow",
-            "keys": "ctrl+shift+w"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "closeTab"
-            },
-            "keys": "ctrl+w"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "ctrl+k"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "ctrl+j"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "ctrl+alt+h"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "down"
-            },
-            "keys": "ctrl+alt+j"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+q"
-        },
-        {
-            "command": 
-            {
                 "action": "resizePane",
                 "direction": "up"
             },
             "keys": "ctrl+alt+k"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            }
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+c"
         },
         {
             "command": "unbound",
@@ -145,10 +80,82 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
+                "action": "moveFocus",
+                "direction": "up"
             },
-            "keys": "ctrl+shift+c"
+            "keys": "ctrl+k"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "closeWindow",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "ctrl+l"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "ctrl+h"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": 
+            {
+                "action": "closeTab"
+            },
+            "keys": "ctrl+w"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "ctrl+alt+h"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "ctrl+alt+j"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+q"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+j"
         },
         {
             "command": 
@@ -161,21 +168,19 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-    "experimental.rendering.forceFullRepaint": false,
-    "focusFollowMouse": false,
-    "launchMode": "default",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "profiles": 
     {
         "defaults": 
         {
-            "acrylicOpacity": 0.5,
+            "acrylicOpacity": 0.75,
             "bellStyle": "window",
             "colorScheme": "Campbell",
+            "cursorShape": "filledBox",
             "font": 
             {
                 "face": "MesloLGS NF",
-                "size": 10
+                "size": 11
             },
             "startingDirectory": null,
             "useAcrylic": true
@@ -183,15 +188,20 @@
         "list": 
         [
             {
-                "bellStyle": "window",
-                "colorScheme": "UbuntuLegit",
-                "cursorShape": "filledBox",
+                "colorScheme": "Campbell Powershell",
+                "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe --NoLogo",
                 "font": 
                 {
-                    "face": "MesloLGS NF",
-                    "size": 10,
-                    "weight": "normal"
+                    "face": "CaskaydiaCove Nerd Font Mono",
+                    "size": 12
                 },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "colorScheme": "UbuntuLegit",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "icon": "https://gist.githubusercontent.com/bradwilson/3b81a192a63056e310e453bc7f4c063d/raw/12c4ca3b01e89d2a9dffa5377af9d7f0923ff9a2/terminal-icon-ubuntu.ico",
@@ -200,50 +210,10 @@
                 "startingDirectory": "/home/patrick/"
             },
             {
-                "colorScheme": "Campbell Powershell",
-                "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe --NoLogo",
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono",
-                    "size": 10
-                },
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": "%USERPROFILE%"
-            },
-            {
-                "bellStyle": "window",
-                "closeOnExit": "graceful",
                 "colorScheme": "One Half Dark",
                 "commandline": "ssh pat5546@hydra1.ece.ubc.ca",
-                "cursorColor": "#808080",
-                "cursorHeight": 25,
-                "cursorShape": "filledBox",
-                "font": 
-                {
-                    "face": "MesloLGS NF",
-                    "size": 10
-                },
                 "guid": "{9f4ad5ee-5945-44da-a63a-4d9824d68e8e}",
-                "name": "hydra1.ece.ubc.ca",
-                "padding": "10",
-                "snapOnInput": true
-            },
-            {
-                "bellStyle": "window",
-                "cursorShape": "filledBox",
-                "font": 
-                {
-                    "face": "MesloLGS NF",
-                    "size": 10
-                },
-                "guid": "{cee9134b-398f-550f-b17d-69d9133751c9}",
-                "hidden": false,
-                "name": "Test - Ubuntu",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "/home/patrick"
+                "name": "hydra1.ece.ubc.ca"
             }
         ]
     },
@@ -294,6 +264,27 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background" : "#282A36",
+            "black" : "#21222C",
+            "blue" : "#BD93F9",
+            "brightBlack" : "#6272A4",
+            "brightBlue" : "#D6ACFF",
+            "brightCyan" : "#A4FFFF",
+            "brightGreen" : "#69FF94",
+            "brightPurple" : "#FF92DF",
+            "brightRed" : "#FF6E6E",
+            "brightWhite" : "#FFFFFF",
+            "brightYellow" : "#FFFFA5",
+            "cyan" : "#8BE9FD",
+            "foreground" : "#F8F8F2",
+            "green" : "#50FA7B",
+            "name" : "Dracula",
+            "purple" : "#FF79C6",
+            "red" : "#FF5555",
+            "white" : "#F8F8F2",
+            "yellow" : "#F1FA8C"
         },
         {
             "background": "#282C34",
@@ -457,6 +448,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#16171D",
+            "black": "#878787",
+            "blue": "#44B4CC",
+            "brightBlack": "#E373C8",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#19D1D8",
+            "brightGreen": "#81EC0D",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#E5E5E5",
+            "brightYellow": "#FFD93D",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#19D1D8",
+            "foreground": "#FFFFFF",
+            "green": "#CCFF04",
+            "name": "VibrantTom",
+            "purple": "#9933CC",
+            "red": "#FF6600",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F5F5F5",
+            "yellow": "#FFD93D"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -480,8 +494,6 @@
             "yellow": "#808000"
         }
     ],
-    "showTerminalTitleInTitlebar": true,
-    "startOnUserLogin": false,
     "tabSwitcherMode": "disabled",
     "tabWidthMode": "titleLength",
     "wordDelimiters": " "
