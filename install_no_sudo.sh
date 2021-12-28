@@ -48,20 +48,20 @@ else
   echo "~/.gitconfig already exists, delete to reset"
 fi
 
-# Hardlinking .vimrc file
+# Symlinking .vimrc file
 if [ ! -f "$HOME/.vimrc" ]
 then
-  echo "Hardlinking .vimrc"
-  ln $HOME/.setup/.vimrc ~/.vimrc
+  echo "Symlinking .vimrc"
+  ln -s $HOME/.setup/.vimrc ~/.vimrc
 else
   echo "~/.vimrc already exists, delete to reset"
 fi
 
-# Hardlinking .zshrc file
+# Symlinking .zshrc file
 if [ ! -f "$HOME/.zshrc" ]
 then
-  echo "Hardlinking .zshrc"
-  ln $HOME/.setup/.zshrc ~/.zshrc
+  echo "Symlinking .zshrc"
+  ln -s $HOME/.setup/.zshrc ~/.zshrc
 else
   echo "~/.zshrc already exists, delete to reset"
 fi

@@ -695,4 +695,4 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+t `
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
 
-# Clear-Host  # So that Windows Terminal will render Oh My Posh themes with -nologo properly
+Clear-Host  # So that Windows Terminal will render Oh My Posh themes with -nologo properly
