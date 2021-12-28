@@ -5,14 +5,6 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "command": 
-            {
                 "action": "copy",
                 "singleLine": false
             }
@@ -78,6 +70,25 @@
             "keys": "alt+enter"
         },
         {
+            "command": "unbound",
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "command": "paste"
+        },
+        {
             "command": 
             {
                 "action": "moveFocus",
@@ -86,8 +97,12 @@
             "keys": "ctrl+k"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "ctrl+h"
         },
         {
             "command": "closeWindow",
@@ -100,14 +115,6 @@
                 "direction": "right"
             },
             "keys": "ctrl+l"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "ctrl+h"
         },
         {
             "command": "find",
@@ -133,17 +140,17 @@
             "command": 
             {
                 "action": "resizePane",
-                "direction": "left"
+                "direction": "down"
             },
-            "keys": "ctrl+alt+h"
+            "keys": "ctrl+alt+j"
         },
         {
             "command": 
             {
                 "action": "resizePane",
-                "direction": "down"
+                "direction": "left"
             },
-            "keys": "ctrl+alt+j"
+            "keys": "ctrl+alt+h"
         },
         {
             "command": "closePane",
@@ -164,6 +171,10 @@
                 "direction": "right"
             },
             "keys": "ctrl+alt+l"
+        },
+        {
+            "command": "duplicateTab",
+            "keys": "ctrl+t"
         }
     ],
     "confirmCloseAllTabs": false,
