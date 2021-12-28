@@ -13,7 +13,7 @@ set-alias desktop "Desktop.ps1"
 #Set-PoshPrompt -theme "D:\Dropbox\poshv3.json"
 
 # Path to the Oh My Posh theme
-oh-my-posh --init --shell pwsh --config "$env:USERPROFILE\Programming\git_projects\.setup\poshthemes\atomic_tweak.json" | Invoke-Expression
+oh-my-posh --init --shell pwsh --config "$env:USERPROFILE\Programming\git_projects\.setup\poshthemes\atomic_tweak_windows.json" | Invoke-Expression
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
