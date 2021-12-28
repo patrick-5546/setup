@@ -1,3 +1,8 @@
+# Windows Terminal: new tab / pane in same directory
+precmd() {
+  printf "\e]9;9;%s\e\\" "$PWD"
+}
+
 # Adding bin for python packages to path
 export PATH=$HOME/.local/bin:$PATH
 
@@ -115,7 +120,7 @@ alias h='history'
 alias lt='ls -lahrt'
 alias llt='ls -lhrt'
 
-# Oh My Posh Theme configuration
+# Oh My Posh theme configuration
 eval "$(oh-my-posh --init --shell zsh --config ~/.setup/poshthemes/atomic_tweak.json)"
 
 # enhancd configuration
