@@ -16,11 +16,6 @@ else
 fi
 echo ""
 
-# Install fzf - https://github.com/junegunn/fzf
-echo "Installing fzf: **CHOOSE Y Y N**"
-$HOME/.setup/fzf/install
-echo ""
-
 # Install Oh My Zsh - https://github.com/ohmyzsh/ohmyzsh
 if [ ! -d "$HOME/.oh-my-zsh" ]
 then
