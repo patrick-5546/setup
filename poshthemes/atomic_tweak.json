@@ -3,6 +3,7 @@
     "final_space": true,
     "console_title": true,
     "console_title_style": "folder",
+    "osc99": true,
     "blocks": [
       {
         "type": "prompt",
