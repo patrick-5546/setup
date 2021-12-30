@@ -1,8 +1,3 @@
-# Windows Terminal: new tab / pane in same directory
-precmd() {
-  printf "\e]9;9;%s\e\\" "$PWD"
-}
-
 # Adding bin for python packages to path
 export PATH=$HOME/.local/bin:$PATH
 
@@ -128,4 +123,7 @@ source $HOME/.setup/enhancd/init.sh
 
 # diff-so-fancy configuration
 export PATH=$PATH:$HOME/.setup/diff-so-fancy
+
+# Machine-specific Zsh setup file
+source $HOME/.zshrc.local
 

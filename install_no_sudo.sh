@@ -61,6 +61,15 @@ else
   echo "~/.zshrc already exists, delete to reset"
 fi
 
+# Creating machine-specific Zsh setup file
+if [ ! -f "$HOME/.zshrc.local" ]
+then
+  echo "Creating .zshrc.local"
+  touch $HOME/.zshrc.local
+else
+  echo "~/.zshrc.local already exists, delete to reset"
+fi
+
 echo ""
 
 # Restart into zsh
