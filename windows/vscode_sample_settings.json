@@ -37,7 +37,7 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "window.title": "${dirty}${activeEditorShort}${separator}${activeEditorLong}${separator}${appName}",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootPath}${separator}${appName}",
     "window.titleBarStyle": "custom",  // saves space by replacing the native operating system's title bar
     "workbench.sideBar.location": "right",  // sidebar doesn't move code as much
     // "terminal.integrated.mouseWheelScrollSensitivity": 0.25,
