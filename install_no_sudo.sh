@@ -28,20 +28,8 @@ fi
 
 echo ""
 
-# Copying .gitconfig file
-if [ ! -f "$HOME/.gitconfig" ]
-then
-  if grep -iq wsl /proc/version
-  then
-    echo "Copying .gitconfig.wsl"
-    cp -u $HOME/.setup/.gitconfig.wsl ~/.gitconfig
-  else
-    echo "Copying .gitconfig"
-    cp -u $HOME/.setup/.gitconfig ~/.gitconfig
-  fi
-else
-  echo "~/.gitconfig already exists, delete to reset"
-fi
+# Configuring git settings
+$HOME/.setup/git_config.sh
 
 # Symlinking .vimrc file
 if [ ! -f "$HOME/.vimrc" ]

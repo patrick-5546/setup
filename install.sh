@@ -24,5 +24,5 @@ echo "Installing ripgrep"
 sudo apt-get install ripgrep
 echo ""
 
-source $HOME/.setup/install_no_sudo.sh
+$HOME/.setup/install_no_sudo.sh
 
