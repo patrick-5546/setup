@@ -5,7 +5,7 @@ echo "Configuring git settings"
 # diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global interactive.diffFilter "diff-so-fancy --patch"
-
+# diff-so-fancy suggested highlighted colors
 git config --global color.ui true
 git config --global color.diff-highlight.oldNormal    "red bold"
 git config --global color.diff-highlight.oldHighlight "red bold 52"
@@ -22,6 +22,8 @@ git config --global color.diff.whitespace "red reverse"
 # git pull -> git pull --rebase
 git config --global pull.rebase true
 
+# automatically prune on pull/fetch
+git config --global fetch.prune true
 
 if grep -iq wsl /proc/version
 then
