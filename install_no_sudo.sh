@@ -29,7 +29,7 @@ fi
 echo ""
 
 # Configuring git settings
-$HOME/.setup/git_config.sh
+$HOME/.setup/git_config_linux.sh
 
 # Symlinking .vimrc file
 if [ ! -f "$HOME/.vimrc" ]
@@ -62,4 +62,3 @@ echo ""
 
 # Restart into zsh
 exec /bin/zsh
-

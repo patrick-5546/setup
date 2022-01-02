@@ -24,5 +24,5 @@ echo "Installing ripgrep"
 sudo apt-get install ripgrep
 echo ""
 
+# Setup packages and plugins that don't need root access
 $HOME/.setup/install_no_sudo.sh
-

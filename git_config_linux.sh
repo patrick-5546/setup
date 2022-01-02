@@ -2,6 +2,13 @@
 
 echo "Configuring git settings"
 
+# configure git settings common to Windows and Linux
+BASEDIR=$(dirname "$0")
+$BASEDIR/git_config_common.sh
+
+# use vim as editor
+git config --global core.editor "vim"
+
 # diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global interactive.diffFilter "diff-so-fancy --patch"
@@ -18,15 +25,6 @@ git config --global color.diff.commit     "yellow bold"
 git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
-
-# git pull -> git pull --rebase
-git config --global pull.rebase true
-
-# automatically prune on pull/fetch
-git config --global fetch.prune true
-
-# use vim as editor
-git config --global core.editor "vim"
 
 if grep -iq wsl /proc/version
 then

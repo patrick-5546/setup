@@ -126,4 +126,3 @@ export PATH=$PATH:$HOME/.setup/diff-so-fancy
 
 # Machine-specific Zsh setup file
 source $HOME/.zshrc.local
-
