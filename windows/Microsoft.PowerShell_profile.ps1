@@ -1,6 +1,8 @@
 using namespace System.Management.Automation
 using namespace System.Management.Automation.Language
 
+# From https://gist.github.com/shanselman/25f5550ad186189e0e68916c6d7f44c3?WT.mc_id=-blog-scottha
+
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadLine
