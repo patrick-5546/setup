@@ -9,6 +9,6 @@ BASEDIR=$(dirname "$0")
 $BASEDIR/../git_config_common.sh
 
 # use neovim as editor
-git config --global core.editor "neovim"
+git config --global core.editor "nvim"
 
 echo ""
