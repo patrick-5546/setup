@@ -25,6 +25,9 @@ git config --global pull.rebase true
 # automatically prune on pull/fetch
 git config --global fetch.prune true
 
+# use vim as editor
+git config --global core.editor "vim"
+
 if grep -iq wsl /proc/version
 then
     echo "WSL detected, authenticate using Git Credential Manager"
