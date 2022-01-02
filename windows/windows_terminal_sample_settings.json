@@ -224,7 +224,7 @@
             },
             {
                 "colorScheme": "One Half Dark",
-                "commandline": "ssh pat5546@hydra1.ece.ubc.ca",
+                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd ~/git_projects && exec zsh -l\"",
                 "guid": "{9f4ad5ee-5945-44da-a63a-4d9824d68e8e}",
                 "name": "hydra1.ece.ubc.ca"
             },
