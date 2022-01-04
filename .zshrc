@@ -78,7 +78,7 @@ plugins=(
   fzf
 )
 
-# fzf configuration: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf
+# fzf configuration
 export FZF_BASE=$HOME/.setup/fzf
 # DISABLE_FZF_AUTO_COMPLETION="true"
 # DISABLE_FZF_KEY_BINDINGS="true"
