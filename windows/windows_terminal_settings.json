@@ -5,9 +5,10 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
         },
         {
             "command": "unbound",
@@ -80,13 +81,9 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "command": "paste"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -97,12 +94,15 @@
             "keys": "ctrl+k"
         },
         {
+            "command": "paste"
+        },
+        {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "ctrl+h"
+            "keys": "ctrl+l"
         },
         {
             "command": "closeWindow",
@@ -112,9 +112,9 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "ctrl+l"
+            "keys": "ctrl+h"
         },
         {
             "command": "find",
@@ -201,10 +201,10 @@
         [
             {
                 "colorScheme": "Campbell Powershell",
-                "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe --NoLogo",
+                "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe -NoLogo",
                 "font": 
                 {
-                    "face": "CaskaydiaCove Nerd Font Mono",
+                    "face": "CaskaydiaCove NF",
                     "size": 12
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -217,23 +217,47 @@
                 "colorScheme": "UbuntuLegit",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
-                "icon": "https://gist.githubusercontent.com/bradwilson/3b81a192a63056e310e453bc7f4c063d/raw/12c4ca3b01e89d2a9dffa5377af9d7f0923ff9a2/terminal-icon-ubuntu.ico",
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\terminal-icon-ubuntu.ico",
                 "name": "Personal - Ubuntu",
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "/home/patrick/"
+                "startingDirectory": "/home/patrick/git_projects"
+            },
+            {
+                "colorScheme": "VibrantTom",
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\sailbot.png",
+                "name": "Sailbot - Ubuntu-18.04",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "/home/patrick/catkin_ws/src/local-pathfinding"
             },
             {
                 "colorScheme": "One Half Dark",
-                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd ~/git_projects && exec zsh -l\"",
+                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd /data/pat5546/cpen497f/champsim-497f && exec zsh -l\"",
                 "guid": "{9f4ad5ee-5945-44da-a63a-4d9824d68e8e}",
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\ubc-ece.png",
                 "name": "hydra1.ece.ubc.ca"
+            },
+            {
+                "colorScheme": "Dracula",
+                "commandline": "ssh -t patrick@192.168.1.70 \"cd ~/media-server-docker-appdata && exec zsh -l\"",
+                "guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\synology.png",
+                "name": "SERVERtrick"
+            },
+            {
+                "colorScheme": "Vintage",
+                "commandline": "ssh -t NAStrick@192.168.1.234 -p 24 \"cd /volume2/media-server/Torrents && exec bash -l\"",
+                "guid": "{9014a6e9-2d0c-440b-8312-c9255af6cd83}",
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\rocket.png",
+                "name": "NASA"
             },
             {
                 "commandline": "%PROGRAMFILES%/git/bin/bash.exe -i -l",
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "icon": "%PROGRAMFILES%/Git/mingw64/share/git/git-for-windows.ico",
-                "name" : "Git Bash",
-                "startingDirectory" : "%USERPROFILE%"
+                "name": "Git Bash",
+                "startingDirectory": "%USERPROFILE%"
             },
             {
                 "commandline": "powershell.exe",
@@ -304,25 +328,27 @@
             "yellow": "#C19C00"
         },
         {
-            "background" : "#282A36",
-            "black" : "#21222C",
-            "blue" : "#BD93F9",
-            "brightBlack" : "#6272A4",
-            "brightBlue" : "#D6ACFF",
-            "brightCyan" : "#A4FFFF",
-            "brightGreen" : "#69FF94",
-            "brightPurple" : "#FF92DF",
-            "brightRed" : "#FF6E6E",
-            "brightWhite" : "#FFFFFF",
-            "brightYellow" : "#FFFFA5",
-            "cyan" : "#8BE9FD",
-            "foreground" : "#F8F8F2",
-            "green" : "#50FA7B",
-            "name" : "Dracula",
-            "purple" : "#FF79C6",
-            "red" : "#FF5555",
-            "white" : "#F8F8F2",
-            "yellow" : "#F1FA8C"
+            "background": "#282A36",
+            "black": "#21222C",
+            "blue": "#BD93F9",
+            "brightBlack": "#6272A4",
+            "brightBlue": "#D6ACFF",
+            "brightCyan": "#A4FFFF",
+            "brightGreen": "#69FF94",
+            "brightPurple": "#FF92DF",
+            "brightRed": "#FF6E6E",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFFA5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#8BE9FD",
+            "foreground": "#F8F8F2",
+            "green": "#50FA7B",
+            "name": "Dracula",
+            "purple": "#FF79C6",
+            "red": "#FF5555",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F8F8F2",
+            "yellow": "#F1FA8C"
         },
         {
             "background": "#282C34",
