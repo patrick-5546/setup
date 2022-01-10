@@ -1,11 +1,3 @@
-" Fast quiting
-nmap <leader>q :q<cr>
-
-" Copy word in one click
-map W yiw
-
-
-
 " basic.vim - the ultimate vimrc, basic version
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -56,7 +48,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = ","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -331,11 +323,11 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+" " Quickly open a buffer for scribble
+" map <leader>q :e ~/buffer<cr>
 
-" Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+" " Quickly open a markdown buffer for scribble
+" map <leader>x :e ~/buffer.md<cr>
 
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
@@ -522,3 +514,13 @@ autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel 
 
 " Add blank lines with enter in command mode
 map <Enter> o<ESC>
+
+
+
+" personal configurations
+"
+" Fast quiting
+nmap <leader>q :q<cr>
+
+" Copy word in one click
+map W yiw
