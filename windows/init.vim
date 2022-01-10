@@ -1,20 +1,22 @@
 source ~/.vimrc
 
-" plugins
+" " plugins
+" " 1. Install Vim Plug: https://github.com/junegunn/vim-plug
+" " 2. Enter Neovim and run :PlugInstall to install the plugins
 " call plug#begin('C:\Users\pcrei\AppData\Local\nvim\autoload\plugged')
-" Plug 'asvetliakov/vim-easymotion'
+"     Plug 'asvetliakov/vim-easymotion'
 " call plug#end()
-" 
+
 " " vim-easymotion configuration
 " let g:EasyMotion_do_mapping = 0 " Disable default mappings
-" " Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" " `s{char}{label}`
-" " nmap s <Plug>(easymotion-overwin-f)
-" " or
-" " `s{char}{char}{label}`
-" " Need one more keystroke, but on average, it may be more comfortable.
+
+" " s{char}{char} to move to {char}{char}
 " nmap s <Plug>(easymotion-overwin-f2)
-" 
+
+" " Move to word
+" map  <Leader>w <Plug>(easymotion-bd-w)
+" nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " " Turn on case-insensitive feature
 " let g:EasyMotion_smartcase = 1
 
