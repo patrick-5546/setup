@@ -5,10 +5,9 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+k"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": "unbound",
@@ -81,9 +80,13 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "command": "paste"
         },
         {
             "command": 
@@ -94,15 +97,12 @@
             "keys": "ctrl+k"
         },
         {
-            "command": "paste"
-        },
-        {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "ctrl+l"
+            "keys": "ctrl+h"
         },
         {
             "command": "closeWindow",
@@ -112,9 +112,9 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "ctrl+h"
+            "keys": "ctrl+l"
         },
         {
             "command": "find",
@@ -560,6 +560,7 @@
     ],
     "tabSwitcherMode": "disabled",
     "tabWidthMode": "titleLength",
+    "useAcrylicInTabRow": true,
     "windowingBehavior": "useExisting",
     "wordDelimiters": " "
 }
