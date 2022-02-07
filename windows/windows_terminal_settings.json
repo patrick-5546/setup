@@ -5,9 +5,10 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
         },
         {
             "command": "unbound",
@@ -80,13 +81,9 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "command": "paste"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": 
@@ -97,12 +94,15 @@
             "keys": "ctrl+k"
         },
         {
+            "command": "paste"
+        },
+        {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "ctrl+h"
+            "keys": "ctrl+l"
         },
         {
             "command": "closeWindow",
@@ -112,9 +112,9 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "ctrl+l"
+            "keys": "ctrl+h"
         },
         {
             "command": "find",
@@ -195,7 +195,7 @@
                 "size": 11
             },
             "startingDirectory": null,
-            "useAcrylic": true
+            "useAcrylic": false
         },
         "list": 
         [
@@ -211,7 +211,7 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": "C:\\Users\\pcrei\\Programming\\git_projects"
             },
             {
                 "colorScheme": "UbuntuLegit",
@@ -233,7 +233,7 @@
             },
             {
                 "colorScheme": "One Half Dark",
-                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd /data/pat5546/cpen497f/champsim-497f && exec zsh -l\"",
+                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd /data/pat5546/cpen497f && exec zsh -l\"",
                 "guid": "{9f4ad5ee-5945-44da-a63a-4d9824d68e8e}",
                 "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\ubc-ece.png",
                 "name": "hydra1.ece.ubc.ca"
@@ -276,6 +276,13 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{b392fccc-db65-5b6b-9739-d5797407ae7d}",
+                "hidden": false,
+                "name": "Ubuntu-18.04-WSL-1",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "/home/patrick"
             }
         ]
     },
