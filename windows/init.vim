@@ -25,10 +25,10 @@ if exists("g:vscode")
     " map <Leader>j <Plug>(easymotion-j)
     " map <Leader>k <Plug>(easymotion-k)
 
-    " Toggle line numbering betweeb relative and absolute with :Nu
-    command! Nu call VSCodeCall('settings.cycle.relativeLineNumbers')
-    autocmd InsertEnter * :Nu
-    autocmd InsertLeave * :Nu
+    "" Toggle line numbering betweeb relative and absolute with :Nu
+    "command! Nu call VSCodeCall('settings.cycle.relativeLineNumbers')
+    "autocmd InsertEnter * :Nu
+    "autocmd InsertLeave * :Nu
 
     function! s:manageEditorSize(...)
         let count = a:1
