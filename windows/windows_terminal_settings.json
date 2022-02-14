@@ -1,14 +1,14 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+k"
+                "action": "copy",
+                "singleLine": false
+            }
         },
         {
             "command": "unbound",
@@ -81,9 +81,13 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
-            }
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "command": "paste"
         },
         {
             "command": 
@@ -94,15 +98,12 @@
             "keys": "ctrl+k"
         },
         {
-            "command": "paste"
-        },
-        {
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "right"
+                "direction": "left"
             },
-            "keys": "ctrl+l"
+            "keys": "ctrl+h"
         },
         {
             "command": "closeWindow",
@@ -112,9 +113,9 @@
             "command": 
             {
                 "action": "moveFocus",
-                "direction": "left"
+                "direction": "right"
             },
-            "keys": "ctrl+h"
+            "keys": "ctrl+l"
         },
         {
             "command": "find",
@@ -185,7 +186,6 @@
     {
         "defaults": 
         {
-            "acrylicOpacity": 0.75,
             "bellStyle": "window",
             "colorScheme": "Campbell",
             "cursorShape": "filledBox",
@@ -194,8 +194,7 @@
                 "face": "MesloLGS NF",
                 "size": 11
             },
-            "startingDirectory": null,
-            "useAcrylic": false
+            "startingDirectory": null
         },
         "list": 
         [
@@ -260,13 +259,11 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": true,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
