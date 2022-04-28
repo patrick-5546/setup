@@ -74,6 +74,12 @@
                 "workbench.action.toggleZenMode",
             ]
         },
+        {
+            "before": ["<S-e>"],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+            ]
+        },
     ],
 
     // vim related
@@ -96,5 +102,5 @@
     "git.autofetch": "all",
     "notebook.lineNumbers": "on",
     "redhat.telemetry.enabled": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
 }
