@@ -199,7 +199,6 @@
         "list": 
         [
             {
-                "colorScheme": "Campbell Powershell",
                 "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe -NoLogo",
                 "font": 
                 {
@@ -213,7 +212,6 @@
                 "startingDirectory": "C:\\Users\\pcrei\\Programming\\git_projects"
             },
             {
-                "colorScheme": "UbuntuLegit",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\terminal-icon-ubuntu.ico",
@@ -232,14 +230,14 @@
             },
             {
                 "colorScheme": "One Half Dark",
-                "commandline": "ssh -t pat5546@hydra1.ece.ubc.ca \"cd /data/pat5546/cpen497f && exec zsh -l\"",
+                "commandline": "ssh pat5546@hydra1.ece.ubc.ca",
                 "guid": "{9f4ad5ee-5945-44da-a63a-4d9824d68e8e}",
                 "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\ubc-ece.png",
                 "name": "hydra1.ece.ubc.ca"
             },
             {
                 "colorScheme": "Dracula",
-                "commandline": "ssh -t patrick@192.168.1.70 \"cd ~/media-server-docker-appdata && exec zsh -l\"",
+                "commandline": "ssh patrick@192.168.1.70",
                 "guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
                 "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\synology.png",
                 "name": "SERVERtrick"
