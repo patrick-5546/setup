@@ -4,11 +4,39 @@
     "actions": 
     [
         {
+            "command": "paste"
+        },
+        {
             "command": 
             {
                 "action": "copy",
                 "singleLine": false
-            }
+            },
+            "keys": "ctrl+insert"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+q"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+k"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": "unbound",
@@ -79,6 +107,38 @@
             "keys": "ctrl+v"
         },
         {
+            "command": "unbound",
+            "keys": "ctrl+j"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+h"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+l"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+k"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "down"
+            },
+            "keys": "ctrl+alt+j"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+h"
+        },
+        {
             "command": 
             {
                 "action": "resizePane",
@@ -87,39 +147,8 @@
             "keys": "ctrl+alt+k"
         },
         {
-            "command": "paste"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "ctrl+k"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "ctrl+h"
-        },
-        {
             "command": "closeWindow",
             "keys": "ctrl+shift+w"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "ctrl+l"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -141,21 +170,9 @@
             "command": 
             {
                 "action": "resizePane",
-                "direction": "down"
-            },
-            "keys": "ctrl+alt+j"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
                 "direction": "left"
             },
             "keys": "ctrl+alt+h"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+q"
         },
         {
             "command": 
@@ -163,7 +180,7 @@
                 "action": "moveFocus",
                 "direction": "down"
             },
-            "keys": "ctrl+j"
+            "keys": "alt+j"
         },
         {
             "command": 
@@ -188,11 +205,10 @@
         {
             "bellStyle": "window",
             "colorScheme": "Campbell",
-            "cursorShape": "filledBox",
             "font": 
             {
-                "face": "MesloLGS NF",
-                "size": 11
+                "face": "FiraCode NF",
+                "size": 10
             },
             "startingDirectory": null
         },
@@ -200,16 +216,18 @@
         [
             {
                 "commandline": "C:\\Users\\pcrei\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe -NoLogo",
-                "font": 
-                {
-                    "face": "CaskaydiaCove NF",
-                    "size": 12
-                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
                 "startingDirectory": "C:\\Users\\pcrei\\Programming\\git_projects"
+            },
+            {
+                "guid": "{60c3e313-8e1a-58f6-8175-3650c2bd2b26}",
+                "hidden": false,
+                "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\terminal-icon-ubuntu.ico",
+                "name": "Ubuntu 22.04 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             },
             {
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
@@ -237,7 +255,7 @@
             },
             {
                 "colorScheme": "Dracula",
-                "commandline": "ssh patrick@192.168.1.70",
+                "commandline": "ssh patrick@192.168.1.71",
                 "guid": "{141d171c-4fd9-426d-9008-8cbc4b0b05d3}",
                 "icon": "C:\\Users\\pcrei\\Programming\\git_projects\\.setup\\windows\\icons\\synology.png",
                 "name": "SERVERtrick"
@@ -278,6 +296,12 @@
                 "name": "Ubuntu-18.04-WSL-1",
                 "source": "Windows.Terminal.Wsl",
                 "startingDirectory": "/home/patrick"
+            },
+            {
+                "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+                "hidden": true,
+                "name": "Ubuntu-22.04",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -489,6 +513,52 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-18.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-22.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#2C001E",
